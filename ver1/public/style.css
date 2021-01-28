@@ -94,36 +94,55 @@ p {
 /* -----section----- */
 
 [id*="sec-"]{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #sec-intro {
-  background-image: url(/public/expic.jpg);
-  background-size: cover;
-  height: 50vh;
+  height: 100vh;
   opacity: 1;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgb(26, 24, 24);
+  color: #fff;
+}
+
+#sec-intro h1{
+  font-size: 5rem;
+}
+
+#sec-intro em {
+  margin: 0 .2rem;
+  font-style: normal;
+  color: var(--main-color);
 }
 
 /* -----nav----- */
+nav  {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  font-size: .8rem;
+  font-weight: 200;
+  background-color: #eeeeee46;
+}   
+
 nav * {
   display: flex;
   align-items: center;
 }
 
-nav  {
-  font-size: .8rem;
-  font-weight: 200;
-}               
-
+          
 nav ul li::after {
   content: '/';
   color: var(--secondary-font-color);
   margin: 0 1rem;
 }
 
-nav ul li:last-child:after {
-  content: '';
+nav ul li:last-child:after , nav ul li:first-child:after{
+  display: none;
 }
 
 nav ul li>a:hover {
