@@ -1,0 +1,8 @@
+.icon-btn{
+  cursor: pointer;
+  fill : #28B8EC;
+}
+
+.icon-btn:hover{
+  opacity: .8;
+}

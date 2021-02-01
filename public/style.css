@@ -51,7 +51,7 @@ h1,h2,h3{
 
 h1 {
   width: fit-content;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h1::first-letter{
@@ -208,16 +208,18 @@ footer p:last-child{
 
 /* -----games----- */
 .sub-sec {
-  margin-top: 2rem;
+  margin-top: 100px;
 }
 
 .image {
   margin: 1rem 0;
-  width: 100%;
   height: 350px;
   background-color: #fff;
   border-radius: 16px;
   transition: box-shadow .3s ease-in;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .image:hover {
@@ -235,7 +237,6 @@ footer p:last-child{
   height: 200px;
   margin-bottom: .5rem;
 
-  background-image: url(./person1.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -317,4 +318,35 @@ footer p:last-child{
 
 #slider-thumbnails li:focus {
   outline: none;
+}
+
+
+/* ----- tab ----- */
+
+.games-tab li{
+  cursor: pointer;
+  float: left;
+  padding : 1rem;
+  border-bottom: 1.5px solid var(--secondary-font-color);
+  transition: border .3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.games-tab li.active {
+  border-bottom: 3px solid var(--main-color);
+  transition: border .3s ease-in-out;
+}
+
+.games-info {
+  padding: 2rem;
+}
+
+
+
+/* ----- mobile ----- */
+
+@media screen and (max-width : 420px){
+  .image{
+    height: 200px;
+  }
 }
