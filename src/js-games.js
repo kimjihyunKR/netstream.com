@@ -1,20 +1,36 @@
-const dalgonaTumbnail = document.querySelector("#game-dalgona");
-const yongsaTumbnail = document.querySelector("#game-yongsa");
-const modal = document.querySelector(".modal")
+const tab = document.querySelector(".js-tab");
+const tabContentes = document.querySelectorAll(".js-tab-content");
 
-const gamesTab = document.querySelector(".games-tab");
+const imageWraps = document.querySelectorAll(".image");
 
-function init() {
-  dalgonaTumbnail.style.backgroundImage = "url(../public/dalgona.webp)";
-  yongsaTumbnail.style.backgroundImage = "url(../public/yongsa.webp)";
+function tabClickEventHandler(e) {
+  const tabItem = e.target;
+  const parentTab = e.target.parentNode;
+  if(tabItem.classList.contains("tab-item")){
+    for (let i = 0; i < parentTab.children.length; i++) {
+      var tableChild = parentTab.children[i];
+      tableChild.classList.remove("active")
+    }
+    tabItem.classList.add("active");
 
-  dalgonaTumbnail.addEventListener('click', function(event){
-    modal.classList.toggle('show')
+    tabContentes.forEach( content => {
+      if (tabItem.dataset.name === content.dataset.name) {
+        content.classList.add("show");
+      } else {
+        content.classList.remove("show");
+      }
+    });
+  }
+}
+
+function setImage() {
+  imageWraps.forEach( imageWrap => {
+    const imageSource = imageWrap.querySelector("img");
+    imageWrap.style.backgroundImage = `url(${imageSource.src})`;
+    imageSource.remove();
   })
 }
 
-init();
+setImage();
+tab.addEventListener("click", tabClickEventHandler);
 
-gamesTab.addEventListener('click', function(event){
-  console.log(event.target)
-})

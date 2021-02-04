@@ -26,6 +26,4 @@ SliderNavThumbanils.forEach( function(item, index) {
   const IMG_URL = `url(../public/${ThumbnailImages[index]}.jpg)`;
   item.style.backgroundImage = IMG_URL;
   ProfileThumbanils[index+1].style.backgroundImage = IMG_URL;
-})
-
-console.log(ProfileThumbanils)
+});

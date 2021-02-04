@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="public/favicon.ico" />
+  <link rel="shortcut icon" href="public/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <link rel="stylesheet" href="public/gridSystem.css">
@@ -35,7 +37,7 @@
     </div>
   </nav>
 
-  <section id="sec-intro" class="vertical-center" >
+  <section id="sec-intro" class="vertical-center text-center" >
     <div class="container center">
      <h1 class="logo">
       <img src="./public/icon/netstreamLogoWhite.svg" alt="netstream">
@@ -56,12 +58,29 @@
       </p>
     </section>
 
+    <section id="sec-webvr" class="center col-12">
+      <h1>Web VR</h1>
+      <div class="sub-sec center">
+        <img src="public/webvr02.png" alt="" class="col-8">
+        <p>for more pleasant and interesting VR·AR·DApp ecosystem.</p>
+      </div>
+     
+      
+      <div class="sub-sec center">
+        <img src="public/webvr01.png" alt="" class="col-8 hover-shadow">
+        <p>for more pleasant and interesting VR·AR·DApp ecosystem.</p>
+      </div>
+      
+      
+      
+    </section>
+
   </div>
 
   <section id="sec-games" >
-    <div class="container center ">
+    <div class="container center">
       <h1>Games</h1>
-      <p class=" text-center">
+      <p class="col-12 text-center">
         NetStream이 2020년 개발중인 2종의 Mobile (DApp) Game 입니다.<br>
         넷스트림은 현재 2종의 Mobile App을 Google Play Store에 론칭했으며, <br>
         2021년 1분기 출시를 목표로 방치형 RPG를 개발중에 있습니다. 
@@ -90,13 +109,16 @@
       </div> -->
 
       <div class="sub-sec col-10">
-        <ul class="games-tab row">
-          <li class="tab-item active">백만 달고나 챌린지</li>
-          <li class="tab-item">무한변신 RPG, 용사는 변신중</li>
+        <ul class="js-tab games-tab row">
+          <li class="tab-item active" data-name="dalgona">백만 달고나 챌린지</li>
+          <li class="tab-item" data-name="yongsa">무한변신 RPG, 용사는 변신중</li>
         </ul>
 
-        <div class="games-content">
-          <div class="col-6 image game-image"></div>
+        <div class="js-tab-content games-content show" data-name="dalgona">
+          <div class="col-6 image">
+            <span class="sr-only">백만 달고나 챌린지 게임 이미지</span>
+            <img src="public/dalgona.webp">
+          </div>
           <div class="col-6 games-info">
             <h2>백만 달고나 챌린지</h2>
             <span class="text-info">
@@ -107,12 +129,32 @@
               달고나 커피는 어더리움 결제를 통해 희귀 커피잔과 스푼을 획득할 수 있으며 향후 게임내 생산되는 다양한 아이템을 NFT Token과 연동하여 
               새로운 부가가치를 창출할 계획을 가지고 있습니다.
             </p>
+            <button type="button" class="btn btn-fill">
+              <a href="https://drive.google.com/file/d/1rzwzrtqFbGl6ZsP_4NmWaDffDTBZuJGg/view" target="_blank">Download</a>
+            </button>
           </div>
-      </div>
-        
+        </div>
 
-
-
+        <div class="js-tab-content games-content" data-name="yongsa">
+          <div class="col-6 image">
+            <span class="sr-only">(가제) 무한변신 방치형 RPG, 용사는 변신중 게임 이미지</span>
+            <img src="public/yongsa.webp">
+          </div>
+          <div class="col-6 games-info">
+            <h2>무한변신 방치형  RPG 용사는 변신중</h2>
+            <span class="text-info">
+              2021 1분기 출시 예정
+            </span>
+            <p>
+              용사는 변신중은 방치형 RPG 게임으로 사냥과 성장과 보상이라는 방치형 RPG 본연의 재미에 충실한 블록체인 기술이 접목된 DApp Game 입니다.
+              MetaMask, Infura를 활용하여 용사는 변신중을 플레이하는 유저들이 이더리움을 통한 아이템과 재화를 구매할 수 있습니다.<br>
+              향후 게임내에서 생산되는 다양한 아이템들을 NFT Token 형태로 배포하여 블록체인 기술의 장점인 생성된 데이터의 연속성, 무결성등을 보장할 수 있도록 발전시켜 나갈 예정입니다.
+            </p>
+            <button type="button" class="btn btn-fill">
+              <a href="https://drive.google.com/file/d/1-5TpNoEmmu6knWCfbOs2udKkQ97jo6RM/view" target="_blank" >Download</a>
+            </button>
+          </div>
+        </div>
     </div>
     
   </section>
@@ -120,7 +162,7 @@
 
   <div class="container row">
 
-    <!-- Slider ver 2 -->
+    <!-- team -->
     <section id="sec-team" class="center col-12">
       <h1>Team</h1>
       <div class="slider-wrap col-8">
@@ -243,11 +285,11 @@
 
     <section id="sec-contact" class="col-12 ">
       <!-- kakao map -->    
-        <div id="map" class="col-6 center">
-          <div id="daumRoughmapContainer1611801282412" class="root_daum_roughmap root_daum_roughmap_landing "></div>
+        <div id="map" class="col-5 center">
+          <div id="daumRoughmapContainer1611801282412" class="root_daum_roughmap root_daum_roughmap_landing "  style="width:100%"></div>
         </div>
     
-        <div class="col-6">
+        <div class="col-7">
           <h1>Contact</h1>
           <p>
             <a href="https://www.facebook.com/netstream2020" target="_blank">
@@ -264,13 +306,7 @@
             </a>
           </p>
 
-          <dl>
-            <dt>명지</dt>
-            <dd>서울특별시 서대문구 명지대1길 21, 302호 넷스트림</dd>
-
-            <dt>가산</dt>
-            <dd>서울 금천구 가산동 459-29 에이스 K1 타워 6층 622호</dd>
-          </dl>
+          <span class="text-info">서울특별시 서대문구 명지대1길 21, 302호 넷스트림</span>
 
           <p>
             NetStream에 관심을 가져주셔서 감사합니다. <br>
@@ -292,9 +328,6 @@
             <dt>주소 : 명지</dt>
             <dd>서울특별시 서대문구 명지대1길 21, 302호 넷스트림</dd>
 
-            <dt>주소 : 가산</dt>
-            <dd>서울 금천구 가산동 459-29 에이스 K1 타워 6층 622호</dd>
-          
             <dt>메일</dt>
             <dd>
               <a href="mailto:david@netstream.co.kr">
@@ -320,6 +353,7 @@
 
   <!-- kakao map -->
   <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="src/js-nav.js"></script>
   <script src="src/js-map.js"></script>
   <script src="src/js-games.js"></script>
   <script src="src/slider-setting.js"></script>

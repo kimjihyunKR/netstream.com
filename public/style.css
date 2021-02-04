@@ -89,17 +89,6 @@ p {
   justify-content: center;
 }
 
-
-/* screen read only */
-.sr-only {
-  position: absolute;
-  z-index: -100;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-	opacity: 0;
-}
-
 /* -----section----- */
 
 [id*="sec-"]{
@@ -150,13 +139,20 @@ p {
 
 /* -----nav----- */
 nav  {
+  width: 100%;
   padding : .5rem 0;
   position: fixed;
-  width: 100%;
+  top: -200px;
   z-index: 5;
   font-size: .8rem;
   font-weight: 200;
-  background-color: #eeeeee46;
+  background-color: #eeeeee55;
+  transition: top .4s ease-in-out;
+}
+
+.nav-show{
+  top: 0;
+  transition: top .35s ease-in-out;
 }
 
 nav * {
@@ -322,25 +318,47 @@ footer p:last-child{
 
 
 /* ----- tab ----- */
-
-.games-tab li{
+.js-tab li{
   cursor: pointer;
   float: left;
-  padding : 1rem;
+  padding : .6rem;
   border-bottom: 1.5px solid var(--secondary-font-color);
-  transition: border .3s ease-in-out;
   margin-bottom: 1rem;
+  font-size: .8rem;
 }
 
-.games-tab li.active {
-  border-bottom: 3px solid var(--main-color);
-  transition: border .3s ease-in-out;
+.js-tab li.active {
+  border-bottom: 3.5px solid var(--main-color);
 }
 
 .games-info {
   padding: 2rem;
 }
 
+.js-tab-content {
+  display: none;
+}
+
+
+
+/* ----- btn ----- */
+.btn {
+  background-color: var(--main-color);
+  padding: .5rem 1rem;
+  color: #fff;
+}
+
+.btn a {
+  color: #fff;
+}
+
+.btn-fill {
+  border-radius: 2rem;
+}
+
+.btn:hover {
+  opacity: .8;
+}
 
 
 /* ----- mobile ----- */
@@ -349,4 +367,28 @@ footer p:last-child{
   .image{
     height: 200px;
   }
+}
+
+
+
+/* ----- visability ----- */
+.show {
+  display: block;
+  transition: display 1s ease-in-out;
+}
+
+/* screen read only */
+.sr-only {
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+	opacity: 0;
+}
+
+
+
+.hover-shadow:hover {
+  text-shadow: 1px 1px 5px #000;
 }
