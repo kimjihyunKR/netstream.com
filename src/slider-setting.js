@@ -23,7 +23,7 @@ const SliderNavThumbanils = document.querySelectorAll("#slider-thumbnails .profi
 const ProfileThumbanils = document.querySelectorAll(".profile-box .profile-image");
 
 SliderNavThumbanils.forEach( function(item, index) {
-  const IMG_URL = `url(../public/${ThumbnailImages[index]}.jpg)`;
+  const IMG_URL = `url(public/img/${ThumbnailImages[index]}.jpg)`;
   item.style.backgroundImage = IMG_URL;
   ProfileThumbanils[index+1].style.backgroundImage = IMG_URL;
 });

@@ -45,6 +45,10 @@ button {
 }
 
 /* typo */
+*::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
 h1,h2,h3{
   margin-bottom: .5rem;
 }
@@ -64,6 +68,12 @@ h2 {
 
 p {
   line-height: 1.4;
+}
+
+strong {
+  background-color: var(--main-color);
+  padding: 0 .3rem;
+  color: #fff;
 }
 
 .text-center {
@@ -109,11 +119,20 @@ p {
   color: #fff;
 }
 
-#sec-intro h1{
+#sec-intro-text {
+  z-index: 10;
+}
+
+#sec-intro-text > p {
+  margin: 0px;
+}
+
+/* #sec-intro h1{
   width: 50vw;
   border: none;
   margin: 0;
-}
+  height: fit-content;
+} */
 
 #sec-intro em {
   margin: 0 .2rem;
@@ -133,73 +152,9 @@ p {
   background-color: var(--secondary-bg-color);
 }
 
-#sec-games .image {
-  cursor: pointer;
+#sec-webvr {
+  overflow: hidden;
 }
-
-/* -----nav----- */
-nav  {
-  width: 100%;
-  padding : .5rem 0;
-  position: fixed;
-  top: -200px;
-  z-index: 5;
-  font-size: .8rem;
-  font-weight: 200;
-  background-color: #eeeeee55;
-  transition: top .4s ease-in-out;
-}
-
-.nav-show{
-  top: 0;
-  transition: top .35s ease-in-out;
-}
-
-nav * {
-  display: flex;
-  align-items: center;
-}
-          
-nav ul li::after {
-  content: '/';
-  color: var(--secondary-font-color);
-  margin: 0 1rem;
-}
-
-nav ul li:last-child:after , nav ul li:first-child:after{
-  display: none;
-}
-
-nav ul li>a:hover {
-  color: var(--main-color);
-  transition: color .2s ease-in;
-}
-
-nav h1 {
-  margin: 0;
-  border: none;
-  width: 130px;
-}
-.logo img{
-  width: 100%;
-}
-
-
-/* -----footer----- */
-footer {
-  padding: 50px 0;
-  background-color: var(--secondary-bg-color);
-  font-size: .8rem;
-}
-
-footer p {
-  margin-bottom: 1rem;
-}
-
-footer p:last-child{
-  margin-top: 2rem;
-}
-
 
 
 /* -----games----- */
@@ -273,7 +228,6 @@ footer p:last-child{
 
 
 /* -----slider thumbnail ----- */
-
 #slider-thumbnails{
  display: flex;
  flex-direction: row;
@@ -302,7 +256,7 @@ footer p:last-child{
   
 }
 
-/* 활성화된 nav 썸네일 */
+/* 활성화된 slider nav 썸네일 */
 .tns-nav-active .profile-image{
   border: 2.5px solid var(--main-color);
   opacity: .8;
@@ -314,6 +268,81 @@ footer p:last-child{
 
 #slider-thumbnails li:focus {
   outline: none;
+}
+
+/* 
+  componetn 모음
+  nav, footer, tab, btn
+*/
+
+/* -----nav----- */
+nav  {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding : .5rem 0;
+  position: fixed;
+  top: -200px;
+  z-index: 100;
+  font-size: .8rem;
+  background-color: #eeeeee55;
+  transition: top .4s ease-in-out;
+}
+
+.nav-show{
+  top: 0;
+  transition: top .35s ease-in-out;
+}
+
+nav * {
+  display: flex;
+  align-items: center;
+}
+          
+nav ul li::after {
+  content: '/';
+  display:;
+  color: var(--secondary-font-color);
+  margin: 0 1rem;
+}
+
+nav ul li:last-child:after , nav ul li:first-child:after{
+  display: none;
+}
+
+nav ul li>a:hover {
+  color: var(--main-color);
+  transition: color .2s ease-in;
+}
+
+nav .logo{
+  margin: 0;
+  border: none;
+  width: 130px;
+}
+.logo img{
+  width: 100%;
+}
+
+.logo-m {
+  display: none;
+}
+
+
+
+/* -----footer----- */
+footer {
+  padding: 50px 0;
+  background-color: var(--secondary-bg-color);
+  font-size: .8rem;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+footer p:last-child{
+  margin-top: 2rem;
 }
 
 
@@ -367,6 +396,31 @@ footer p:last-child{
   .image{
     height: 200px;
   }
+  #map {
+    margin-bottom: 1rem;
+  }
+  nav {
+    width: 100%;
+    background-color: #fff;
+    flex-wrap: wrap;
+  }
+  .logo-f{
+    text-align: center;
+    width: 100%;
+  }
+  nav * {
+    display: inline-block;
+  }
+
+  
+  .logo-m {
+    /* flex: 1; */
+  }
+  
+  .profile-graphic {
+   line-height: 200px; 
+  }
+  
 }
 
 
@@ -386,7 +440,6 @@ footer p:last-child{
   overflow: hidden;
 	opacity: 0;
 }
-
 
 
 .hover-shadow:hover {
