@@ -14,36 +14,51 @@
   <link rel="stylesheet" href="public/style/style.css">
   <link rel="stylesheet" href="public/style/anim.css">
   <link rel="stylesheet" href="public/style/compo.css">
+
+  <link rel="stylesheet" type="text/css" href="lib/fullpage.js/dist/fullpage.css" />
+  <script type="text/javascript" src="lib/fullpage.js/dist/fullpage.js"></script>
+
+  <style>
+    nav ul li>a {
+      color: #fff;
+    }
+    nav ul li::after {
+      content: '/';
+      display:inline-block;
+      color: #fff;
+      margin: 0 1rem;
+    }
+  </style>
   <title>Netstream | ver-2</title>
 </head>
 <body>
   <nav>
     <div class=" row">
-      <a href="#" class="logo-m col-12 ">
+      <a href="index.html" class="logo-m col-12 ">
         <img src="public/icon/netstreamLogo.svg" alt="netstream">
       </a>
       <ul class="col-12">
         <li class="logo-f">
           <h1 class="sr-only">netstream</h1>
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="public/icon/netstreamLogo.svg" alt="netstream">
           </a>
         </li>
 
         <li>
-          <a href="#sec-about">About</a>
+          <a href="index.html#sec-about">About</a>
         </li>
 
         <li>
-          <a href="#sec-webvr">Web VR</a>
+          <a href="webvr.html">Web VR</a>
         </li>
 
         <li>
-          <a href="#sec-games">Games</a>
+          <a href="index.html#sec-games">Games</a>
         </li>
 
         <li>
-          <a href="#sec-team">Team</a>
+          <a href="team.html">Team</a>
         </li>
       </ul>
     </div>
@@ -73,60 +88,86 @@
         넷스트림은 <strong>VR·AR·Blockchain</strong>기술을 활용하여 <br>
         융복합 콘텐츠 및 서비스를 개발하고 있는 개발 전문 스튜디오입니다.
       </p>
+      <p>
+        <a href="team.html">
+          <em>넷스트림 팀원 알아보기 &rarr;</em>
+        </a>
+      </p>
 
-      <div class="vision-group">
-        <div class="vision text-center vertical-center center">Global No.1<br>VR/AR 개발사</div>
-        <div class="vision text-center vertical-center center">Connection</div>
-        <div class="vision text-center vertical-center center">Variation</div>
+      <div class="circle-item-group">
+        <div class="circle-item text-center vertical-center center">Global No.1<br>VR/AR 개발사</div>
+        <div class="circle-item text-center vertical-center center">Connection</div>
+        <div class="circle-item text-center vertical-center center">Variation</div>
       </div>
-    </section>
 
-    <section id="sec-vision" class="col-6">
-      <h1 class="sr-only">netstream's vision</h1>
       
-      <div class="sub-sec">
-        <h2>Global No.1 VR/AR 개발사</h2>
-        <p> 지속적으로 성장중인 VR/AR 시장을 이끄는 넷스트림</p>
-        <p>
-          현재 VR/AR시장은 지속적인 성장세를 보이고 있습니다. 
-          넷스트림은 VR/AR 시장을 이끄는 Global No.1으로 성장할 것입니다.
-        </p>
-      </div>
 
-      <div class="sub-sec">
-        <h2>Connection</h2>
-        <p>사람과 사람을 연결하여 지역경제 활성화</p>
-        <p>
-          넷스트림은 VR/AR 콘텐츠를 통해 사람과 사람을 연결하는 플램폼을 기획 중입니다. 
-          넷스트림만의 네트워크를 통해 지역경제를 활성화하고 사람과 사람 사이의 Connection이 될 것입니다
-        </p>
-      </div>
-
-      <div class="sub-sec">
-        <h2>Variation</h2>
-        <p>VR/AR 생태계에 변화를 일으키는 넷스트림</p>
-        <p>
-          넷스트림만의 독창적인 아이디어로 VR/AR 생태계의 새로운 패러다임을 제시합니다.
-        </p>
-      </div>
-      
     </section>
-
-
   </div>
+
+  <div  id="fullpage">
+    <div id="sec-vision-world" class="section  ">
+      <h1 class="sr-only">netstream's vision</h1>
+      <div class="container row">
+        <div class="col-12 sec-content">
+          <h2>Global No.1 VR/AR 개발사</h2>
+          <p> 지속적으로 성장중인 VR/AR 시장을 이끄는 넷스트림</p>
+          <p>
+            현재 VR/AR시장은 지속적인 성장세를 보이고 있습니다. <br>
+            넷스트림은 VR/AR 시장을 이끄는 Global No.1으로 성장할 것입니다.
+          </p>
+        </div>  
+      </div>
+      <div class="image bg-image">
+        <img src="public/img/world.jpg" alt="">
+      </div>
+    </div>
+
+    <div id="sec-vision-connection" class="section ">
+      <div class="container row">
+        <div class="col-12 sec-content ">
+          <h2>Connection</h2>
+          <p>사람과 사람을 연결하여 지역경제 활성화</p>
+          <p>
+            넷스트림은 VR/AR 콘텐츠를 통해 사람과 사람을 연결하는 플램폼을 기획 중입니다. <br>
+            넷스트림만의 네트워크를 통해 지역경제를 활성화하고 사람과 사람 사이의 Connection이 될 것입니다
+          </p>
+        </div>
+      </div>
+      <div class="image bg-image">
+        <img src="public/img/connection.jpg" alt="">
+      </div>
+    </div>
+    <div id="sec-vision-variation" class="section">
+      <div class="container row ">
+        <div class="col-12 sec-content text-center">
+          <h2>Variation</h2>
+          <p>VR/AR 생태계에 변화를 일으키는 넷스트림</p>
+          <p>
+            넷스트림만의 독창적인 아이디어로<br/>
+            VR/AR 생태계의 새로운 패러다임을 제시합니다.
+          </p>
+        </div>
+      </div>
+      <div class="image bg-image">
+        <img src="public/img/variation2.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  
 
   <section id="sec-games" >
     <div class="container center row">
 
       <h1>GAME LINEUP</h1>
       <div>
-        <div class="link-group">
-          <div class="link-item link-chain text-center vertical-center center">이더리움(ETH)</div>
-          <div class="link-item link-chain text-center vertical-center center">MetaMask</div>
-          <div class="link-item text-center vertical-center center">Infra<br>(블록체인 솔루션)</div>
+        <div class="circle-item-group">
+          <div class="circle-item link-chain text-center vertical-center center">이더리움(ETH)</div>
+          <div class="circle-item link-chain text-center vertical-center center">MetaMask</div>
+          <div class="circle-item text-center vertical-center center">Infra<br>(블록체인 솔루션)</div>
         </div>
       </div>
-      <p>
+      <p class="col-12 text-center">
         블록체인 기술 접목한 이더리움 재화를 활용해 경제 시스템 구축<br>
         MetaMask, Infra를 활용하여 플레이하는 유저들이 이더리움을 통해 아이템과 재화를 구매할 수 있는 형태로 구현
       </p>
@@ -136,7 +177,7 @@
       </ul>
       
       <div class="js-tab-content col-10 show"  data-name="dalgona">
-        <div class="games-preview col-4 col-m-4">
+        <div class="games-preview col-4 col-m-4 ">
           <img src="public/phone.png" alt="" class="phone-frame" >
           <div class="image">
             <span class="sr-only">백만 달고나 챌린지 플레이 화면</span>
@@ -166,7 +207,7 @@
             <a href="https://drive.google.com/file/d/1rzwzrtqFbGl6ZsP_4NmWaDffDTBZuJGg/view" target="_blank">Download</a>
           </button>
         </div>
-      </div>
+      </div><!--/dalgona-->
 
       <div class="js-tab-content games-content col-10" data-name="yongsa">
         <div class="games-preview col-4 col-m-4">
@@ -194,35 +235,31 @@
           <button type="button" class="btn btn-fill">
             <a href="https://drive.google.com/file/d/1-5TpNoEmmu6knWCfbOs2udKkQ97jo6RM/view" target="_blank" >Download</a>
           </button>
-        </div>
-      </div>
+        </div> 
+      </div><!--/yongsa-->
+    </div> <!--/container--> 
+  </section> <!--/game section-->
       
-
-      
-  </section>
-
   <section id="sec-webvr">
     <div class="container row">
-      <h1>
-        NETSTREAM만의 <br>
-        새로운 플랫폼
-      </h1>
-      <p>
-        오프라인 페어가 불가능해진 가운데 넷스트림은 Web VR 가상 전시 라는 새로운 대안을 만들었습니다. <br>
-        누구나 접근 가능한 웹, 고객 맞춤형 가상 전시 부스를 통해 페어의 새로운 경험을 개발 중입니다.
-      </p>
-      <button class="btn btn-fill">
-        <a href="webvr.html">바로가기 &rarr; </a>
-      </button>
+      <div class="col-12">
+        <h1>
+          NETSTREAM만의 <br>
+          새로운 <em>가상 전시 솔루션</em>
+        </h1>
+        <p>
+          오프라인 페어가 불가능해진 가운데 넷스트림은 Web VR 가상 전시 라는 새로운 대안을 만들었습니다. <br>
+          누구나 접근 가능한 웹, 고객 맞춤형 가상 전시 부스를 통해 페어의 새로운 경험을 개발 중입니다.
+        </p>
+        <button class="btn btn-fill">
+          <a href="webvr.html">바로가기 &rarr; </a>
+        </button>
+      </div>
     </div>
     <img src="public/img/webvr02.png" alt="web vr 시안">
   </section>
 
   <div class="container row">
-
-    
-
-
     <section id="sec-contact" class="col-12 ">
       <!-- kakao map -->    
         <div id="map" class="col-5 center">
@@ -256,7 +293,6 @@
           </p>
 
         </div>
-     
 
     </section>
   </div>
@@ -303,9 +339,17 @@
       "key" : "2463t",
       "mapHeight" : "300"
     }).render()
+
+    new fullpage('#fullpage', {
+      licenseKey: 'YOUR_KEY_HERE',
+      //options here
+      autoScrolling:true,
+      scrollHorizontally: true
+    });
+
+    //methods
+    fullpage_api.setAllowScrolling(true);
   </script>
   <script src="src/js-tab.js"></script>
-  <script src="src/slider-setting.js"></script>
-  <script src="src/js-scroll.js"></script>
 </body>
 </html>
