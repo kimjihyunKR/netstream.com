@@ -18,17 +18,6 @@
   <link rel="stylesheet" type="text/css" href="lib/fullpage.js/dist/fullpage.css" />
   <script type="text/javascript" src="lib/fullpage.js/dist/fullpage.js"></script>
 
-  <style>
-    nav ul li>a {
-      color: #fff;
-    }
-    nav ul li::after {
-      content: '/';
-      display:inline-block;
-      color: #fff;
-      margin: 0 1rem;
-    }
-  </style>
   <title>Netstream | ver-2</title>
 </head>
 <body>
@@ -64,21 +53,15 @@
     </div>
   </nav>
 
-  <section id="sec-intro" class="vertical-center text-center" >
-    <div class="container center col-12" id="sec-intro-text">
-      <img src="public/icon/netstreamLogoWhite.svg" alt="netstream" id="intro-logo" class="col-8 col-m-6">
-      <h1 class="sr-only">
-       netstream
-      </h1>
-      <p>for more pleasant and interesting VR·AR·DApp ecosystem.</p>
-    </div>
-    <!-- <img src="public/img/bg-graphic.png" alt="background graphic" class="bg-grahic"> -->
-    <div class="anim-wave">
-      <div class="wave -one"></div>
-      <div class="wave -two"></div>
-      <div class="wave -three"></div>
-    </div>
+  <section>
+    <video width="100%" controlslist="nodownload noremoteplayback" disablePictureInPicture playsinline autoplay >
+      <source src="public/webm3.webm" type="video/webm">
+      <source src="public/video1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </section>
+  
+
 
   <div class="container row">
 
@@ -95,9 +78,19 @@
       </p>
 
       <div class="circle-item-group">
-        <div class="circle-item text-center vertical-center center">Global No.1<br>VR/AR 개발사</div>
-        <div class="circle-item text-center vertical-center center">Connection</div>
-        <div class="circle-item text-center vertical-center center">Variation</div>
+        <div class="circle-item text-center vertical-center center"
+            data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="500">
+          
+          Global No.1<br>VR/AR 개발사
+        </div>
+        <div class="circle-item text-center vertical-center center"
+            data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+          Connection
+        </div>
+        <div class="circle-item text-center vertical-center center"
+            data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
+          Variation
+        </div>
       </div>
 
       
@@ -105,8 +98,7 @@
     </section>
   </div>
 
-  <div  id="fullpage">
-    <div id="sec-vision-world" class="section  ">
+    <section id="sec-vision-world" class="section full-page" data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="800">
       <h1 class="sr-only">netstream's vision</h1>
       <div class="container row">
         <div class="col-12 sec-content">
@@ -121,9 +113,9 @@
       <div class="image bg-image">
         <img src="public/img/world.jpg" alt="">
       </div>
-    </div>
+    </section>
 
-    <div id="sec-vision-connection" class="section ">
+    <section id="sec-vision-connection" class="section full-page" data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="800">
       <div class="container row">
         <div class="col-12 sec-content ">
           <h2>Connection</h2>
@@ -137,9 +129,9 @@
       <div class="image bg-image">
         <img src="public/img/connection.jpg" alt="">
       </div>
-    </div>
+    </section>
 
-    <div id="sec-vision-variation" class="section">
+    <section id="sec-vision-variation" class="section full-page" data-aos="fade-up"  data-aos-anchor-placement="center-bottom" >
       <div class="container row ">
         <div class="col-12 sec-content text-center">
           <h2>Variation</h2>
@@ -153,9 +145,8 @@
       <div class="image bg-image">
         <img src="public/img/variation2.jpg" alt="">
       </div>
-    </div>
-    
-  </div>
+    </section>
+
   
 
   <section id="sec-games" >
@@ -164,9 +155,18 @@
       <h1>GAME LINEUP</h1>
       <div>
         <div class="circle-item-group">
-          <div class="circle-item link-chain text-center vertical-center center">이더리움(ETH)</div>
-          <div class="circle-item link-chain text-center vertical-center center">MetaMask</div>
-          <div class="circle-item text-center vertical-center center">Infra<br>(블록체인 솔루션)</div>
+          <div class="circle-item link-chain text-center vertical-center center"
+              data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="500">
+            이더리움(ETH)
+          </div>
+          <div class="circle-item link-chain text-center vertical-center center"
+              data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+            MetaMask
+          </div>
+          <div class="circle-item text-center vertical-center center"
+              data-aos="fade-up"  data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
+            Infra<br>(블록체인 솔루션)
+          </div>
         </div>
       </div>
       <p class="col-12 text-center">
@@ -180,13 +180,12 @@
       
       <div class="js-tab-content col-10 show"  data-name="dalgona">
         <div class="games-preview col-4 col-m-4 ">
+          <span class="sr-only">백만 달고나 챌린지 플레이 화면</span>
           <img src="public/phone.png" alt="" class="phone-frame" >
           <div class="image">
-            <span class="sr-only">백만 달고나 챌린지 플레이 화면</span>
-            <img src="public/img/person0.jpg">
+            <img src="public/img/dalgona01.jpg">
           </div>
         </div>
-
         <div class="col-8 games-info">
           <h2>백만 달고나 챌린지</h2>
           <span class="text-info">
@@ -213,12 +212,12 @@
 
       <div class="js-tab-content games-content col-10" data-name="yongsa">
         <div class="games-preview col-4 col-m-4">
+          <span class="sr-only">용사는 변신중 플레이 화면</span>
           <img src="public/phone.png" alt="" class="phone-frame" >
           <div class="image">
-            <span class="sr-only">용사는 변신중 플레이 화면</span>
-            <img src="public/img/person1.jpg">
+            <img src="public/img/yongsa02.jpg">
           </div>
-        </div>
+      </div>
 
         <div class="col-8 games-info">
           <h2>무한변신 방치형  RPG 용사는 변신중</h2>
@@ -242,7 +241,7 @@
     </div> <!--/container--> 
   </section> <!--/game section-->
       
-  <section id="sec-webvr">
+  <section id="sec-webvr" >
     <div class="container row">
       <div class="col-12">
         <h1>
@@ -258,13 +257,13 @@
         </button>
       </div>
     </div>
-    <img src="public/img/webvr02.png" alt="web vr 시안">
+    <img src="public/img/webvr02.png" alt="web vr 시안" data-aos="fade-left"  data-aos-duration="1000" >
   </section>
 
   <div class="container row">
     <section id="sec-contact" class="col-12 ">
       <!-- kakao map -->    
-        <div id="map" class="col-5 center">
+        <div id="map" class="col-5 center" data-aos="fade-right" data-aos-duration="1000"  >
           <div id="daumRoughmapContainer1611801282412" class="root_daum_roughmap root_daum_roughmap_landing "  style="width:100%"></div>
         </div>
     
@@ -342,15 +341,6 @@
       "mapHeight" : "300"
     }).render()
 
-    new fullpage('#fullpage', {
-      licenseKey: 'YOUR_KEY_HERE',
-      //options here
-      autoScrolling:true,
-      scrollHorizontally: true
-    });
-
-    //methods
-    fullpage_api.setAllowScrolling(true);
   </script>
   <script src="src/js-tab.js"></script>
 </body>

@@ -32,5 +32,9 @@ function setImage() {
 }
 
 setImage();
-tab.addEventListener("click", tabClickEventHandler);
+
+if(tab){
+  tab.addEventListener("click", tabClickEventHandler);
+}
+
 

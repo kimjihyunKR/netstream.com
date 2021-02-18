@@ -1,0 +1,15 @@
+  <section id="sec-intro" class="vertical-center text-center" >
+    <div class="container center col-12" id="sec-intro-text">
+      <img src="public/icon/netstreamLogoWhite.svg" alt="netstream" id="intro-logo" class="col-8 col-m-6">
+      <h1 class="sr-only">
+       netstream
+      </h1>
+      <p>for more pleasant and interesting VR·AR·DApp ecosystem.</p>
+    </div>
+    <!-- <img src="public/img/bg-graphic.png" alt="background graphic" class="bg-grahic"> -->
+    <div class="anim-wave">
+      <div class="wave -one"></div>
+      <div class="wave -two"></div>
+      <div class="wave -three"></div>
+    </div>
+  </section>

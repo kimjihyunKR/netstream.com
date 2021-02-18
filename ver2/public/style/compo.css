@@ -50,6 +50,10 @@
   border-radius: 30px;
 }
 
+.image-changer > .image {
+  display: none;
+}
+
 @media screen and (max-width : 420px){
   .circle-item-group{
     gap: 10px;
