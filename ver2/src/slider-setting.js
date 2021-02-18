@@ -3,13 +3,14 @@ var slider = tns({
   container: '.my-slider2',
   items: 1,
   slideBy: 1,
-  // autoplay: true,
+  autoplay: true,
   mouseDrag : true,
   speed : 600,
   controlsContainer : '.slider-controler2',
   navContainer : '#slider-thumbnails',
   navAsThumbnails : true,
   autoplayButtonOutput : false,
+  preventScrollOnTouch: 'auto' 
 });
 
 const ThumbnailImages = [
